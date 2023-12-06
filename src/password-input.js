@@ -35,7 +35,7 @@ export class PasswordInput extends HTMLElement {
   }
 
   disconnectedCallback() {
-    if (this.buttonElement instanceof Element) {
+    if (this.buttonElement) {
       this.removeEventListener('click', this.onClickButton);
       this.buttonElement.remove();
     }

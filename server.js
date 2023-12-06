@@ -1,4 +1,7 @@
-const bs = require("browser-sync").create();
+import browserSync from "browser-sync";
+
+
+const bs = browserSync.create();
 
 // .init starts the server
 bs.init({

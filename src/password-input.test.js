@@ -38,4 +38,28 @@ describe('password-input component', ()=> {
     assert.equal(!!button, true);
   });
 
+  it('should set the discrete property to false when the input type is text', () => {
+    document.body.innerHTML = `
+      <password-input>
+        <input id="pw" type="text">
+      </password-input>
+    `;
+    const instance = document.querySelector('password-input');
+    
+
+    assert.equal(instance.discrete, false);
+  });
+
+  it('should set the discrete property to true when the input type is password', () => {
+    document.body.innerHTML = `
+      <password-input>
+        <input id="pw" type="password">
+      </password-input>
+    `;
+    const instance = document.querySelector('password-input');
+    
+
+    assert.equal(instance.discrete, true);
+  });
+
 });
